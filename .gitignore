@@ -11,4 +11,12 @@ PCAN_Basic_Linux-*
 pcan-basic.zip
 PCAN_Basic
 *.so
+tkMessageBox
+
+# Eclipse
+.project
+.cproject
+.pydevproject
+.settings
+.metadata
 
