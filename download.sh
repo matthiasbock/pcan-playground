@@ -6,3 +6,6 @@ tar -xzf PCAN_Basic_Linux-4.2.0.tar.gz
 wget -c https://www.peak-system.com/fileadmin/media/files/pcan-basic.zip
 unzip -o pcan-basic.zip -d PCAN_Basic
 
+# Necessary in order to enable import
+echo > PCAN_Basic/__init__.py
+
