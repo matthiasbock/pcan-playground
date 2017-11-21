@@ -12,8 +12,11 @@ hoping that they work with identical API calls.
 
 ## Getting the API
 
- * https://www.peak-system.com/fileadmin/media/files/pcan-basic.zip
- * http://www.peak-system.com/produktcd/Develop/PC%20interfaces/Linux/PCAN-Basic_API_for_Linux/PCAN_Basic_Linux-4.2.0.tar.gz
+Run ./download.sh from the root folder of the repository, it will download the necessary files from Peak, apply my patches and compile it.
+
+## Requirements
+
+ * tix
 
 ## License
 The software within this repository is published under the terms and conditions of the GNU GPLv3.
