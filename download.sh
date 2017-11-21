@@ -8,7 +8,7 @@ patch -p0 < p1.patch
 
 # Compile .so
 cd PCAN_Basic_Linux-4.2.0/pcanbasic
-make
+make && ln -s libpcanbasic.so ../..
 cd ../..
 
 wget -c https://www.peak-system.com/fileadmin/media/files/pcan-basic.zip
