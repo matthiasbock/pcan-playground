@@ -1,0 +1,14 @@
+# Temporary
+.*.swp
+.*~
+
+# Python
+*.pyc
+
+# Peak libraries
+PCAN_Basic_Linux-*.tar.gz
+PCAN_Basic_Linux-*
+pcan-basic.zip
+PCAN_Basic
+
+
