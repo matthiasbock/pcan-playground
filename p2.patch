@@ -1,0 +1,21 @@
+--- PCAN_Basic_Linux-4.2.0/pcanbasic/examples/c++/Makefile      2016-01-12 11:37:22.000000000 +0100
++++ Makefile     2017-11-21 17:13:13.448477789 +0100
+@@ -36,7 +36,7 @@
+ #****************************************************************************
+ 
+ SRC     = src
+-INC     = -I. -I../.. 
++INC     = -I. -I../.. -I../../src/libpcanfd
+ RT      = NO_RT
+  
+ DBG = DEBUG
+@@ -75,6 +75,8 @@
+   LDLIBS  = -L../lib -L/lib -L/usr/lib -L/usr/local/lib
+ endif
+ 
++LDLIBS += -L../../
++
+ # enabling corss-compile from ../Makefile
+ ifneq ($(CROSS_COMPILE),)
+   LDLIBS  = -L../lib
+
