@@ -16,7 +16,10 @@ Run ./download.sh from the root folder of the repository, it will download the n
 
 ## Requirements
 
- * tix
+ * Python 3.4 or higher
+ * tk
+ * <a href="https://packages.debian.org/stretch/tix">tix</a>
+ * <a href="https://packages.debian.org/stretch/libpopt-dev">libpopt-dev</a>
 
 ## License
 The software within this repository is published under the terms and conditions of the GNU GPLv3.
