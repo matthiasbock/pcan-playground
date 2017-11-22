@@ -1,4 +1,3 @@
-#!/usr/bin/python
 
 from time import sleep
 #from ctypes import *
@@ -6,11 +5,24 @@ from time import sleep
 
 from PCAN_Basic.Include.PCANBasic import *
 
-m_CHANNELS = {'PCAN_USBBUS1':PCAN_USBBUS1,
-                           'PCAN_USBBUS2':PCAN_USBBUS2, 'PCAN_USBBUS3':PCAN_USBBUS3, 'PCAN_USBBUS4':PCAN_USBBUS4, 'PCAN_USBBUS5':PCAN_USBBUS5,
-                           'PCAN_USBBUS6':PCAN_USBBUS6, 'PCAN_USBBUS7':PCAN_USBBUS7, 'PCAN_USBBUS8':PCAN_USBBUS8, 'PCAN_USBBUS9':PCAN_USBBUS9,
-                           'PCAN_USBBUS10':PCAN_USBBUS10, 'PCAN_USBBUS11':PCAN_USBBUS11, 'PCAN_USBBUS12':PCAN_USBBUS12, 'PCAN_USBBUS13':PCAN_USBBUS13,
-                           'PCAN_USBBUS14':PCAN_USBBUS14, 'PCAN_USBBUS15':PCAN_USBBUS15, 'PCAN_USBBUS16':PCAN_USBBUS16 }
+m_CHANNELS = {
+                'PCAN_USBBUS1':PCAN_USBBUS1,
+                'PCAN_USBBUS2':PCAN_USBBUS2,
+                'PCAN_USBBUS3':PCAN_USBBUS3,
+                'PCAN_USBBUS4':PCAN_USBBUS4,
+                'PCAN_USBBUS5':PCAN_USBBUS5,
+                'PCAN_USBBUS6':PCAN_USBBUS6,
+                'PCAN_USBBUS7':PCAN_USBBUS7,
+                'PCAN_USBBUS8':PCAN_USBBUS8,
+                'PCAN_USBBUS9':PCAN_USBBUS9,
+                'PCAN_USBBUS10':PCAN_USBBUS10,
+                'PCAN_USBBUS11':PCAN_USBBUS11,
+                'PCAN_USBBUS12':PCAN_USBBUS12,
+                'PCAN_USBBUS13':PCAN_USBBUS13,
+                'PCAN_USBBUS14':PCAN_USBBUS14,
+                'PCAN_USBBUS15':PCAN_USBBUS15,
+                'PCAN_USBBUS16':PCAN_USBBUS16
+            }
 
 print("Welcome!")
                            
@@ -53,7 +65,7 @@ def ProcessMessage(*args):
 
     newMsg = TPCANMsg()
     newMsg.ID = theMsg.ID
-    print("Received frame from ID ", hex(newMsg.ID))
+    print("Received CAN frame from ID ", hex(newMsg.ID))
     newMsg.DLC = theMsg.LEN
     for i in range(8 if (theMsg.LEN > 8) else theMsg.LEN):
         newMsg.DATA[i] = theMsg.DATA[i]
@@ -61,7 +73,7 @@ def ProcessMessage(*args):
     newTimestamp = TPCANTimestamp()
     newTimestamp.value = (itsTimeStamp.micros + 1000 * itsTimeStamp.millis + 0x100000000 * 1000 * itsTimeStamp.millis_overflow)
 
-for i in range(3):
+for i in range(10):
 #while True:
     # We execute the "Read" function of the PCANBasic
     #
@@ -71,5 +83,5 @@ for i in range(3):
         # We show the received message
         #
         ProcessMessage(result[1:])
-
-    sleep(1)
+    else:
+        sleep(1)
