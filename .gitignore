@@ -6,6 +6,8 @@
 *.pyc
 
 # Peak libraries
+peak-linux-driver-*.tar.gz
+peak-linux-driver-*
 PCAN_Basic_Linux-*.tar.gz
 PCAN_Basic_Linux-*
 pcan-basic.zip

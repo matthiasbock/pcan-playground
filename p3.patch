@@ -1,0 +1,11 @@
+--- Makefile    2017-11-23 11:07:00.841004876 +0100
++++ peak-linux-driver-8.5.1/driver/Makefile     2017-11-23 11:06:38.209004338 +0100
+@@ -48,6 +48,7 @@
+ # please modify only here if your kernel path is elsewhere located
+ #
+ KERNEL_LOCATION =
++CC = gcc-4.9
+ 
+ #****************************************************************************
+ # probe various standard kernel locations
+
