@@ -16,11 +16,16 @@ Run ./download.sh from the root folder of the repository, it will download the n
 
 ## Requirements
 
+### Linux
+
  * Python 3.4 or higher
  * tk
  * <a href="https://packages.debian.org/stretch/tix">tix</a>
  * <a href="https://packages.debian.org/stretch/libpopt-dev">libpopt-dev</a>
  * <a href="https://packages.debian.org/jessie/gcc-4.9">GCC Version 4.9</a> (6 and 7 will fail, see <a href="https://github.com/matthiasbock/pcan-playground/issues/2">issue #2</a>)
+  * Header files for your Linux kernel
+ 
+    Example: If you're using <a href="https://packages.debian.org/jessie-backports/linux-image-4.9.0-0.bpo.4-amd64">Linux kernel  4.9.0-0.bpo.4-amd6</a>, then you must additionally install the <a href="https://packages.debian.org/jessie-backports/linux-headers-4.9.0-0.bpo.4-amd64">header files for Linux 4.9.0-0.bpo.4-amd64</a>.
 
 ## License
 The software within this repository is published under the terms and conditions of the GNU GPLv3.
