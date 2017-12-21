@@ -10,7 +10,7 @@ patch -p0 < p2.patch
 
 # Compile .so
 cd PCAN_Basic_Linux-4.2.0/pcanbasic
-make && ln -s libpcanbasic.so ../..
+make PCC=NO_PCCARD_SUPPORT && ln -s libpcanbasic.so ../..
 cd ../..
 
 
@@ -23,7 +23,18 @@ patch -p0 < p3.patch
 
 # Compile driver
 cd peak-linux-driver-8.5.1/
-make
+make \
+ DBG=DEBUG \
+ PAR=NO_PARPORT_SUBSYSTEM \
+ USB=USB_SUPPORT \
+ PCI=NO_PCI_SUPPORT \
+ PCIEC=NO_PCIEC_SUPPORT \
+ DNG=NO_DONGLE_SUPPORT \
+ ISA=NO_ISA_SUPPORT \
+ PCC=NO_PCCARD_SUPPORT \
+ NET=NO_NETDEV_SUPPORT \
+ RT=NO_RT \
+ VERBOSE=1
 cd ..
 
 
